@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<meta name="description" content="Концепция интерактивного спецпроекта для Ozon Tech. От инженерного решения до того, что видит покупатель.">
+<title>почему я вижу это? — тестовое задание</title>
+<link rel="icon" href="favicon.png" type="image/png" sizes="200x200">
+<link rel="stylesheet" href="style.css">
+<script src="demo.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<main id="main">
+<section class="hero" aria-labelledby="headline">
+  <div class="wrap hero-banner">
+    <p class="byline">тестовое задание <span aria-hidden="true">·</span> Арьяна Головина</p>
+    <div class="hero-heading">
+      <h1 id="headline">почему я<br> вижу это?<sup aria-hidden="true">*</sup></h1>
+      <p class="title-note"><em>* рабочее название проекта</em></p>
+    </div>
+    <img class="hero-mascot" src="mascot.png" width="760" height="760" alt="">
+  </div>
+</section>
+<section class="section wrap mechanics" aria-labelledby="mechanics-title">
+  <div class="section-head"><p class="eyebrow">концепция</p><h2 id="mechanics-title">как устроен спецпроект</h2></div>
+  <div>
+    <p class="intro">Из анонсов ведём на лендинг с несколькими инженерными кейсами Ozon Tech. Каждый начинается со знакомой ситуации на маркетплейсе. В интерактиве можно увидеть, как решение команды меняет то, что видит покупатель. Под ним — короткий разбор от инженера команды и ссылка на профильную вакансию.</p>
+    <p>Ниже — пример одного кейса про ранжирование в поиске. Я опиралась на <a href="https://habr.com/ru/companies/ozontech/articles/995840/">статью Ozon Tech на Хабре</a>. Остальные кейсы я бы выбирала вместе с инженерами и рекрутингом с учётом приоритетов найма.</p>
+  </div>
+</section>
+<section class="why" aria-labelledby="choice-title">
+  <div class="section wrap">
+    <div class="section-head"><p class="eyebrow">выбор формата</p><h2 id="choice-title">зачем показывать продукт</h2></div>
+    <div>
+      <p class="intro">Мне интересно показывать инженерную работу через её результат в продукте. В маркетплейсе эту связь можно увидеть прямо на экране: решение команды меняет порядок товаров в выдаче или то, что человек получает в рекомендациях. Я хочу <strong>дать инженеру увидеть, на что он может влиять в Ozon Tech</strong>.</p>
+      <p>У компании уже есть флагманское событие с ML/DS-треком и инженерные соревнования. Для этой задачи я выбрала спецпроект, который может решить две задачи: повысить узнаваемость Ozon Tech среди специалистов ML/DS/AI уровня middle+ и собрать пул релевантных кандидатов.</p>
+      <p>Знакомые сценарии маркетплейса помогают охватить более широкую аудиторию. Внутри каждого кейса можно подробнее показать инженерное решение и задачи команды. Из кейса можно перейти к актуальной вакансии и откликнуться на карьерном сайте.</p>
+      <p>В продвижении профильные статьи и разговоры с инженерами дают ещё один способ познакомиться с задачами команды.</p>
+    </div>
+  </div>
+</section>
+<div class="hero case-showcase">
+<section class="demo-section" id="case" aria-labelledby="demo-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">пример кейса на лендинге</p>
+      <h2 id="demo-title">почему эти наушники выше в поиске?</h2>
+      <p class="deck">Представь, что ищешь наушники с шумоподавлением. Переключи вариант выдачи и посмотри, как меняется порядок товаров.</p>
+    </div>
+    <div class="demo" id="search-demo">
+      <p class="eyebrow">демо · поиск</p>
+      <div class="query"><span class="magnifier" aria-hidden="true"></span>Наушники с шумоподавлением</div>
+      <div class="toggle" aria-label="Режим выдачи">
+        <button type="button" data-mode="match" aria-pressed="true">по соответствию запросу</button>
+        <button type="button" data-mode="offer" aria-pressed="false">с учётом цены и доставки</button>
+      </div>
+      <ol class="results" id="results" aria-label="Порядок товаров">
+        <li data-item="studio"><div class="tile graphite"><span class="headphones" aria-hidden="true"></span></div><strong>Studio ANC</strong><span>8 990 ₽</span><small>Через 4 дня</small></li>
+        <li data-item="air"><div class="tile violet"><span class="headphones" aria-hidden="true"></span></div><strong>Air ANC</strong><span>7 490 ₽</span><small>Завтра</small></li>
+        <li data-item="quiet"><div class="tile sky"><span class="headphones" aria-hidden="true"></span></div><strong>Quiet ANC</strong><span>9 490 ₽</span><small>Через 2 дня</small></li>
+      </ol>
+      <p class="demo-note" id="demo-note" role="status" aria-live="polite">Studio ANC выше: в этом сценарии у модели самое точное совпадение с запросом.</p>
+    </div>
+    <p class="source">Запрос, товары и выдача иллюстративные.</p>
+  </div>
+</section>
+<section class="section wrap case-end" aria-labelledby="engineering-title">
+  <div class="section-head"><p class="eyebrow">пример разбора кейса на лендинге</p><h2 id="engineering-title">что стоит за выдачей</h2></div>
+  <div>
+    <p class="case-author"><strong>Станислав Ким</strong><span>ML-разработчик команды качества поиска Ozon</span></p>
+    <p>Раньше клики и заказы копились в общей истории товара. Если продавец снижал цену или ускорял доставку, в этой истории по-прежнему смешивались реакции покупателей на старые и новые условия. Из-за этого новое выгодное предложение могло остаться ниже в поиске.</p>
+    <p>Команда стала собирать статистику отдельно для разных сочетаний цены и срока доставки. Когда условия меняются, модель переносит часть истории из похожих состояний товара. Так поиск может быстрее отреагировать на выгодное предложение. <a href="https://habr.com/ru/companies/ozontech/articles/995840/">Читать полный разбор на Хабре</a>.</p>
+    <aside class="role" aria-labelledby="role-title">
+      <div><p class="eyebrow">кого мы сейчас ищем</p><h3 id="role-title">старший Data Scientist, ранжирование</h3><p>Развивать модели Learning to Rank и проверять, как они влияют на качество поиска.</p></div>
+      <a class="dark-button" href="https://ozon.tech/vacancies/def32420-f0bf-476c-a9c8-b4141fd9f158">посмотреть вакансию</a>
+    </aside>
+  </div>
+</section>
+</div>
+<section class="section wrap" id="campaign" aria-labelledby="campaign-title">
+  <div class="section-head"><h2 id="campaign-title">продвижение</h2></div>
+  <div>
+    <dl class="channels">
+      <div><dt>Платная реклама</dt><dd>Таргет, контекст, Telegram Ads.</dd></div>
+      <div><dt>Посевы в Telegram</dt><dd>Профильные каналы на основе <a href="https://devcrowd.ru/ds26/">исследования DevCrowd</a>.</dd></div>
+      <div><dt>Open Data Science</dt><dd>Партнёрский анонс на <a href="https://ods.ai/">сайте</a> и в соцсетях сообщества.</dd></div>
+      <div><dt>Собственные каналы</dt><dd>Анонсы в каналах Ozon Tech и Route 256.</dd></div>
+      <div><dt>Рассылки</dt><dd>Релевантным кандидатам из базы и из списка регистраций на E-CODE при наличии согласия на получение таких рассылок.</dd></div>
+      <div><dt>Хабр и Хабр Карьера</dt><dd>Техническая статья от команды в корпоративном блоге. Хабр Карьера — дополнительное размещение, если подходит аудитория.</dd></div>
+      <div><dt>Подкасты</dt><dd>Участие инженера в подкасте на профильную тему. Партнёра выбираю по аудитории и охватам сопоставимых выпусков.</dd></div>
+    </dl>
+    <aside class="activation" aria-labelledby="additional-title">
+      <p class="eyebrow" id="additional-title">дополнительные размещения</p>
+      <h3>наружная реклама</h3>
+      <p>Закупить размещение на крупном цифровом билборде в Москве и запустить посевы в соцсетях, чтобы больше людей о нем узнали.</p>
+      <h3>партизанский маркетинг</h3>
+      <p>Разместить плакаты на площадках в Москве и Петербурге.</p>
+    </aside>
+  </div>
+</section>
+<section class="launch" id="launch" aria-labelledby="launch-title">
+  <div class="section wrap">
+    <div class="section-head"><h2 id="launch-title">план проекта</h2></div>
+    <div>
+      <ol class="steps">
+        <li><strong>Брифинг и подготовка ТЗ</strong><span>Сверяю с рекрутингом приоритеты среди 40 вакансий из брифа. Согласую кейсы с инженерами, собираю фактуру и готовлю ТЗ на лендинг.</span></li>
+        <li><strong>Лендинг и промо</strong><span>Запускаю дизайн и вёрстку лендинга. Вместе с маркетологом готовлю медиаплан и подбираю площадки, авторов и подкасты. На основе визуального стиля лендинга готовим креативы и материалы под выбранные каналы. Перед стартом проверяем настройку аналитики.</span></li>
+        <li><strong>Продвижение</strong><span>Запускаем промо и оцениваем эффективность размещений. При необходимости корректируем медиаплан.</span></li>
+        <li><strong>Анализ эффективности</strong><span>После остановки рекламы анализируем результаты и собираем отчёт.</span></li>
+      </ol>
+      <p class="ownership">Инженеры помогают собрать кейсы, рекрутеры работают с откликами, маркетолог ведёт продвижение. При необходимости подключаю агентство к посевам и/или разработке рекламных креативов.</p>
+      <div class="launch-grid">
+        <div class="budget"><h3>бюджет 50 млн ₽</h3><dl>
+          <div><dt>Продвижение</dt><dd>20 млн</dd></div>
+          <div><dt>Подготовка лендинга и рекламных креативов</dt><dd>4 млн</dd></div>
+          <div><dt>Статьи и подкасты</dt><dd>1 млн</dd></div>
+          <div><dt>Наружная реклама и плакаты</dt><dd>15 млн</dd></div>
+          <div><dt>Резерв под продвижение</dt><dd>10 млн</dd></div>
+        </dl></div>
+        <div class="metrics"><h3>метрики</h3>
+          <p><strong>Бренд.</strong> Охват и упоминания. Узнаваемость можно измерить отдельным опросом при достаточной выборке ЦА.</p>
+          <p><strong>Найм.</strong> Переходы на страницы вакансий → отклики → уникальные релевантные отклики → дошедшие до интервью.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="wrap ai-note" aria-labelledby="ai-title">
+  <div class="ai-copy">
+    <h2 id="ai-title">как я использовала AI</h2>
+    <p>Я использовала ChatGPT в режиме Work:</p>
+    <ul>
+      <li>как собеседника на этапе разработки идеи: обсуждали разные форматы, релевантные каналы для рекламы, структуру и тезисы</li>
+      <li>как инструмент для вайбкодинга лендинга с описанием решения</li>
+    </ul>
+    <h3>заметка на будущее</h3>
+    <p>Если мы хотим регулярно работать с ML/DS-аудиторией, я бы подумала о развитии собственного сообщества. Спецпроект может стать первым шагом, если мы разместим ссылку на канал на лендинге. Повод возвращаться — новые инженерные разборы, вопросы к командам и обмен опытом между участниками.</p>
+    <p>У конкурентов есть подобные сообщества: Авито — <a href="https://t.me/s/DS_avitotech">«Доска AI-объявлений»</a> (почти 5 тыс. подписчиков), Яндекс — <a href="https://t.me/yandexforml">Yandex for ML</a> (почти 20 тыс.).</p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <p class="wrap">навайбкодила Арьяна Головина для Ozon Tech 💚</p>
+</footer>
+</body>
+</html>
